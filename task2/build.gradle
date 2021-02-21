@@ -35,6 +35,9 @@ dependencies {
     jaxb 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
     jaxb 'javax.xml.bind:jaxb-api:2.2.7'
     implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.2.7'
+
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.12'
+    compileOnly 'org.projectlombok:lombok:1.18.8'
 }
 
 test {
@@ -44,6 +47,6 @@ test {
 jaxb {
     xjc {
         xsdDir = "src/main/resources"
-        generatePackage = "generated"
+        generatePackage = "model.generated"
     }
 }
