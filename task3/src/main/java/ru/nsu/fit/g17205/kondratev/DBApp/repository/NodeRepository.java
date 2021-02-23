@@ -1,6 +1,6 @@
-package DBApp.repository;
+package ru.nsu.fit.g17205.kondratev.DBApp.repository;
 
-import DBApp.model.NodeEntity;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.NodeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

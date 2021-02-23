@@ -1,12 +1,12 @@
-package DBApp.controller;
+package ru.nsu.fit.g17205.kondratev.DBApp.controller;
 
 
 
-import DBApp.service.NodeService;
-import DBApp.dto.NodeDTO;
-import DBApp.dto.SearchDTO;
-import DBApp.model.NodeEntity;
-import DBApp.service.OSMReaderService;
+import ru.nsu.fit.g17205.kondratev.DBApp.service.NodeService;
+import ru.nsu.fit.g17205.kondratev.DBApp.dto.NodeDTO;
+import ru.nsu.fit.g17205.kondratev.DBApp.dto.SearchDTO;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.NodeEntity;
+import ru.nsu.fit.g17205.kondratev.DBApp.service.OSMReaderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @RestController
@@ -43,11 +44,11 @@ public class NodeController {
     @PutMapping("/{id}")
     public ResponseEntity<NodeDTO> updateNode(@PathVariable("id") Long id,
                        @Valid @RequestBody NodeDTO node) {
-        NodeEntity nodeEntity = nodeProcessor.update(id, NodeEntity.convert(node));
-        if (nodeEntity != null){
-            return new ResponseEntity<>(NodeDTO.convert(nodeEntity),HttpStatus.OK);
-        }
-        else {
+        try {
+            NodeEntity nodeEntity = nodeProcessor.update(id, NodeEntity.convert(node));
+            return new ResponseEntity<>(NodeDTO.convert(nodeEntity), HttpStatus.OK);
+        } catch (NullPointerException e)
+         {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 

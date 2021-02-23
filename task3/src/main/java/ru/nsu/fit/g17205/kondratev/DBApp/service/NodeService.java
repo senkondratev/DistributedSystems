@@ -1,17 +1,13 @@
-package DBApp.service;
+package ru.nsu.fit.g17205.kondratev.DBApp.service;
 
-import DBApp.repository.NodeRepository;
-import DBApp.repository.TagRepository;
+import ru.nsu.fit.g17205.kondratev.DBApp.repository.NodeRepository;
+import ru.nsu.fit.g17205.kondratev.DBApp.repository.TagRepository;
 import lombok.AllArgsConstructor;
-import DBApp.model.NodeEntity;
-import DBApp.model.TagEntity;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.NodeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @Service
@@ -29,7 +25,7 @@ public class NodeService {
     }
 
     public NodeEntity getNode(Long id) {
-        return nodeRepository.findById(id).get();
+        return nodeRepository.findById(id).orElse(null);
     }
 
     public NodeEntity update(Long id, NodeEntity node) {

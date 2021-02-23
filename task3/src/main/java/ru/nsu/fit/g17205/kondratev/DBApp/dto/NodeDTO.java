@@ -1,12 +1,11 @@
-package DBApp.dto;
+package ru.nsu.fit.g17205.kondratev.DBApp.dto;
 
-import DBApp.model.NodeEntity;
-import DBApp.model.TagEntity;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.NodeEntity;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.TagEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Null;
 import java.util.Map;
 import java.util.stream.Collectors;
 

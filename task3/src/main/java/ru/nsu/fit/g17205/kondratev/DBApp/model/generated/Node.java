@@ -6,7 +6,7 @@
 //
 
 
-package DBApp.model.generated;
+package ru.nsu.fit.g17205.kondratev.DBApp.model.generated;
 
 import java.util.ArrayList;
 import java.util.List;

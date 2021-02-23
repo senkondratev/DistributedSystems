@@ -1,4 +1,4 @@
-<?DBApp.xml version="1.0" encoding="UTF-8"?>
+<?ru.nsu.fit.g17205.kondratev.DBApp.xml version="1.0" encoding="UTF-8"?>
 <Configuration status="debug" strict="true"
                name="XMLConfigTest" packages="org.apache.logging.log4j.test">
     <Filter type="ThresholdFilter" level="trace"/>

@@ -1,4 +1,4 @@
-package DBApp.model;
+package ru.nsu.fit.g17205.kondratev.DBApp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,8 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import java.io.Serializable;
 @Data
 @NoArgsConstructor

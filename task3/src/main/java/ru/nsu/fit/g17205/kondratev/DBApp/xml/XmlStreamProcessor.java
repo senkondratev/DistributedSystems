@@ -1,4 +1,4 @@
-package DBApp.xml;
+package ru.nsu.fit.g17205.kondratev.DBApp.xml;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;

@@ -1,4 +1,4 @@
-package DBApp.dto;
+package ru.nsu.fit.g17205.kondratev.DBApp.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

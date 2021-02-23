@@ -1,8 +1,8 @@
-package DBApp.model;
+package ru.nsu.fit.g17205.kondratev.DBApp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import DBApp.model.generated.Node;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.generated.Node;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;

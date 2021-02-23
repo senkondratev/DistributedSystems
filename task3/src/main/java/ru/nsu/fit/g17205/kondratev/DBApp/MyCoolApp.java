@@ -1,4 +1,4 @@
-package DBApp;
+package ru.nsu.fit.g17205.kondratev.DBApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

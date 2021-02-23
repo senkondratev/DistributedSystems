@@ -57,6 +57,6 @@ test {
 jaxb {
     xjc {
         xsdDir = "src/main/resources"
-        generatePackage = "DBApp.model.generated"
+        generatePackage = "ru.nsu.fit.g17205.kondratev.DBApp.model.generated"
     }
 }

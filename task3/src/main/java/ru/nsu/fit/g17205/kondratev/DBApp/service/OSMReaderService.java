@@ -1,8 +1,8 @@
-package DBApp.service;
+package ru.nsu.fit.g17205.kondratev.DBApp.service;
 
-import DBApp.model.NodeEntity;
-import DBApp.model.generated.Node;
-import DBApp.xml.XmlStreamProcessor;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.NodeEntity;
+import ru.nsu.fit.g17205.kondratev.DBApp.model.generated.Node;
+import ru.nsu.fit.g17205.kondratev.DBApp.xml.XmlStreamProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
