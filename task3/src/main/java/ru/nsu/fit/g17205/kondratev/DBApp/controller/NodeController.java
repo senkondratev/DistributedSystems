@@ -44,7 +44,7 @@ public class NodeController {
 
     @PutMapping("/update")
     public ResponseEntity<NodeDTO> updateNode(
-                       @Validated(NodeDTO.update.class) @RequestBody NodeDTO node) {
+                       @Valid @RequestBody NodeDTO node) {
         try {
             NodeEntity nodeEntity = nodeProcessor.update(NodeEntity.convert(node));
             return new ResponseEntity<>(NodeDTO.convert(nodeEntity), HttpStatus.OK);

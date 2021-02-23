@@ -39,6 +39,4 @@ public class NodeDTO {
         Map<String, String> tags = nodeEntity.getTags().stream().collect(Collectors.toMap(TagEntity::getKey, TagEntity::getValue));
         return new NodeDTO(nodeEntity.getId(), nodeEntity.getUser(), nodeEntity.getLongitude(), nodeEntity.getLatitude(), tags);
     }
-
-    public interface update{}
 }
