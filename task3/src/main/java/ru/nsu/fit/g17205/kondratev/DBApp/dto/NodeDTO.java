@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 public class NodeDTO {
 
     @NotNull
-    @Null(groups = update.class)
     private Long id;
 
     @NotNull
@@ -28,7 +27,6 @@ public class NodeDTO {
     private Double latitude;
 
     @NotNull
-    @Null(groups = update.class)
     private Map<String, String> tags;
 
 

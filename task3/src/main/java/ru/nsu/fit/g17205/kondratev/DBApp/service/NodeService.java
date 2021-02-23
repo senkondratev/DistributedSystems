@@ -28,9 +28,8 @@ public class NodeService {
         return nodeRepository.findById(id).orElse(null);
     }
 
-    public NodeEntity update(Long id, NodeEntity node) {
-        NodeEntity nodeFromDb = nodeRepository.findById(id).orElseThrow(NullPointerException::new);
-        node.setId(nodeFromDb.getId());
+    public NodeEntity update(NodeEntity node) {
+        NodeEntity nodeFromDb = nodeRepository.findById(node.getId()).orElseThrow(NullPointerException::new);
         return nodeRepository.save(node);
     }
 

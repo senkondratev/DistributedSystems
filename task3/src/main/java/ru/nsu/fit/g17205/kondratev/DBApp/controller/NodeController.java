@@ -42,11 +42,11 @@ public class NodeController {
         nodeProcessor.delete(id);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<NodeDTO> updateNode(@PathVariable("id") Long id,
+    @PutMapping("/update")
+    public ResponseEntity<NodeDTO> updateNode(
                        @Validated(NodeDTO.update.class) @RequestBody NodeDTO node) {
         try {
-            NodeEntity nodeEntity = nodeProcessor.update(id, NodeEntity.convert(node));
+            NodeEntity nodeEntity = nodeProcessor.update(NodeEntity.convert(node));
             return new ResponseEntity<>(NodeDTO.convert(nodeEntity), HttpStatus.OK);
         } catch (NullPointerException e)
          {
