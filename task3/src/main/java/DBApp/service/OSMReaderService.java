@@ -1,8 +1,8 @@
-package DBApp.xml;
+package DBApp.service;
 
-import DBApp.db.NodeProcessor;
 import DBApp.model.NodeEntity;
 import DBApp.model.generated.Node;
+import DBApp.xml.XmlStreamProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +18,9 @@ import java.nio.file.Paths;
 import java.sql.SQLException;
 
 @Service
-public class OSMReader {
+public class OSMReaderService {
     @Autowired
-    NodeProcessor nodeProcessor;
+    NodeService nodeProcessor;
     public void readFile() throws XMLStreamException, IOException, JAXBException, SQLException {
         try (XmlStreamProcessor processor = new XmlStreamProcessor(Files.newInputStream(Paths.get("RU-NVS.osm")))) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Node.class);

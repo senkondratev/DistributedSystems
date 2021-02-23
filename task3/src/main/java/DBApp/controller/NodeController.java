@@ -2,11 +2,11 @@ package DBApp.controller;
 
 
 
-import DBApp.db.NodeProcessor;
+import DBApp.service.NodeService;
 import DBApp.dto.NodeDTO;
 import DBApp.dto.SearchDTO;
 import DBApp.model.NodeEntity;
-import DBApp.xml.OSMReader;
+import DBApp.service.OSMReaderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,9 +21,9 @@ import java.util.stream.Collectors;
 public class NodeController {
 
     @Autowired
-    OSMReader osmReader;
+    OSMReaderService osmReader;
     @Autowired
-    NodeProcessor nodeProcessor;
+    NodeService nodeProcessor;
 
     @GetMapping("/{id}")
     public ResponseEntity<NodeDTO> getNode(@PathVariable("id") Long id){

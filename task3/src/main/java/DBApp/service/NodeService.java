@@ -1,4 +1,4 @@
-package DBApp.db;
+package DBApp.service;
 
 import DBApp.repository.NodeRepository;
 import DBApp.repository.TagRepository;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @Service
-public class NodeProcessor {
+public class NodeService {
     @Autowired
     private final NodeRepository nodeRepository;
 
