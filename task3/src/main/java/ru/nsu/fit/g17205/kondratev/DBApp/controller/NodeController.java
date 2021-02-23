@@ -2,6 +2,7 @@ package ru.nsu.fit.g17205.kondratev.DBApp.controller;
 
 
 
+import org.springframework.validation.annotation.Validated;
 import ru.nsu.fit.g17205.kondratev.DBApp.service.NodeService;
 import ru.nsu.fit.g17205.kondratev.DBApp.dto.NodeDTO;
 import ru.nsu.fit.g17205.kondratev.DBApp.dto.SearchDTO;
@@ -43,7 +44,7 @@ public class NodeController {
 
     @PutMapping("/{id}")
     public ResponseEntity<NodeDTO> updateNode(@PathVariable("id") Long id,
-                       @Valid @RequestBody NodeDTO node) {
+                       @Validated(NodeDTO.update.class) @RequestBody NodeDTO node) {
         try {
             NodeEntity nodeEntity = nodeProcessor.update(id, NodeEntity.convert(node));
             return new ResponseEntity<>(NodeDTO.convert(nodeEntity), HttpStatus.OK);
