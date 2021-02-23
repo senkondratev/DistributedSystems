@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 public class NodeDTO {
 
     @NotNull
+    @Null(groups = update.class)
     private Long id;
 
     @NotNull
